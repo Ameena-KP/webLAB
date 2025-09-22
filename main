@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>college</title>
+</head>
+<body>
+<h1> THIS IS AN H1 HEADING</h1>
+<h1>college</h1>
+<h2>college</h2>
+<h3>college</h3>
+<h4>college</h4>
+<h5>college</h5>
+<h6>college</h6>
+
+<p> you are <u>beautiful</u> </p>
+<p align="center">this is center aligned </p>
+<p align="right">this is right aligned </p>
+
+<a href="https://www.google.com/search?q=table+in+html&client=ubuntu&sca_esv=2ad822d8a9922be6&channel=fs&ei=EJLHaLKvErjB4-EPl9iDqAQ&oq=&gs_lp=Egxnd3Mtd2l6LXNlcnAiACoCCAEyExAAGIAEGEMYtAIYigUY6gLYAQEyExAAGIAEGEMYtAIYigUY6gLYAQEyExAAGIAEGEMYtAIYigUY6gLYAQEyExAAGIAEGEMYtAIYigUY6gLYAQEyExAAGIAEGEMYtAIYigUY6gLYAQEyExAAGIAEGEMYtAIYigUY6gLYAQEyExAAGIAEGEMYtAIYigUY6gLYAQEyExAAGIAEGEMYtAIYigUY6gLYAQEyExAAGIAEGEMYtAIYigUY6gLYAQEyExAAGIAEGEMYtAIYigUY6gLYAQEyEBAAGAMYtAIY6gIYjwHYAQIyEBAAGAMYtAIY6gIYjwHYAQIyEBAuGAMYtAIY6gIYjwHYAQIyEBAuGAMYtAIY6gIYjwHYAQIyEBAAGAMYtAIY6gIYjwHYAQIyEBAAGAMYtAIY6gIYjwHYAQIyEBAAGAMYtAIY6gIYjwHYAQIyEBAAGAMYtAIY6gIYjwHYAQIyEBAAGAMYtAIY6gIYjwHYAQIyEBAAGAMYtAIY6gIYjwHYAQJIzBxQAFgAcAF4AZABAJgBAKABAKoBALgBAcgBAPgBAZgCAaACHqgCFJgDHvEF1PKTxZNoKNK6BgQIARgHugYGCAIQARgKkgcBMaAHALIHALgHAMIHAzQtMcgHGQ&sclient=gws-wiz-serp">click here</a>
+
+<marquee>hello world</marquee>
+
+<img src="https://www.shutterstock.com/image-photo/3d-rendered-minion-dreamworks-animation-260nw-2473738463.jpg" alt="" >

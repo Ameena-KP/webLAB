@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>image</title>
+</head>
+<body>
+<div style="background-color:red">
+<h1>CENTER AN IMAGE</h1>
+</div>
+<div style="text-align:center">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoQmKuEfhHxUYYO6NATugVzbMrqwjE2rcX3A&s" alt="">
+</div>
+<div style="background-color:red">
+<h1>TOWN PARTS</h1>
+</div>
+</body>
+</html>
