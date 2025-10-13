@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Side Navigation Example</title>
+  <style>
+    .sidenav {
+      height: 100%;
+      width: 150px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: green;
+      padding-top: 20px;
+    }
+
+    .sidenav a {
+      display: block;
+      color: white;
+      padding: 10px 15px 10px 16px;
+      text-decoration: none;
+    }
+
+    .sidenav a:hover {
+      color: red;
+    }
+
+    .main {
+      margin-left: 150px;
+      padding: 10px 20px;
+      height: 100vh;
+      background: #f4f4f4;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: #fff;
+    }
+
+    .sidebar-heading {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidenav">
+    <a href="q10(about).html" target="content-frame"><u>About Us</u></a>
+    <a href="q10(department).html" target="content-frame"><u>Departments</u></a>
+    <a href="q10(vision).html" target="content-frame"><u>Vision & Mission</u></a>
+    <a href="q10(contact).html" target="content-frame"><u>Contact Us</u></a>
+  </div>
+
+  <div class="main">
+    <h2 class="sidebar-heading">Side Bar Example</h2>
+    <iframe name="content-frame"></iframe>
+  </div>
+
+</body>
+</html>
+
