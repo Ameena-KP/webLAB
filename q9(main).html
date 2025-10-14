@@ -1,12 +1,33 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Frames Example</title>
-</head>
-<frameset cols="50%,50%">
-  <!-- Left frame -->
-  <frame src="q9(menu).html" name="menuFrame">
+  <meta charset="UTF-8">
+  <title>iFrame Example</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
 
-  <!-- Right frame -->
-  <frame src="q9(right).html" name="contentFrame">
-</frameset>
+    .container {
+      display: flex;
+      height: 100vh; /* Full viewport height */
+    }
+
+    .left-frame, .right-frame {
+      width: 50%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <iframe src="q9(menu).html" name="menuFrame" class="left-frame"></iframe>
+    <iframe src="q9(right).html" name="contentFrame" class="right-frame"></iframe>
+  </div>
+
+</body>
 </html>
+
