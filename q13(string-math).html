@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String and Math Functions in JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5faff;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      color: #0077cc;
+    }
+    h2 {
+      color: #0077cc;
+      margin-top: 40px;
+    }
+    p {
+      font-size: 18px;
+      color: #333;
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+    button {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 15px;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+    .output {
+      background-color: white;
+      border: 1px solid #ccc;
+      margin: 20px auto;
+      padding: 15px;
+      border-radius: 5px;
+      width: 60%;
+      text-align: left;
+      font-family: Consolas, monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>String and Math Functions in JavaScript</h1>
+
+  <!-- String Functions Section -->
+  <h2>1️⃣ String Functions</h2>
+  <p>
+    JavaScript provides various string functions to manipulate and analyze text.
+    Some useful ones include <b>toUpperCase()</b>, <b>toLowerCase()</b>, 
+    <b>length</b>, <b>trim()</b>, <b>charAt()</b>, and <b>indexOf()</b>.
+    Click the button below to see how they work!
+  </p>
+
+  <button onclick="showStringFunctions()">Run String Functions</button>
+
+  <div id="stringOutput" class="output"></div>
+
+  <!-- Math Functions Section -->
+  <h2>2️⃣ Math Functions</h2>
+  <p>
+    The JavaScript <b>Math</b> object provides mathematical constants and functions 
+    such as <b>Math.PI</b>, <b>Math.sqrt()</b>, <b>Math.pow()</b>, <b>Math.abs()</b>, 
+    and rounding functions like <b>Math.floor()</b>, <b>Math.ceil()</b>, and <b>Math.round()</b>.
+  </p>
+
+  <button onclick="showMathFunctions()">Run Math Functions</button>
+
+  <div id="mathOutput" class="output"></div>
+
+  <script>
+    // String function demo
+    function showStringFunctions() {
+      let text = " Hello JavaScript! ";
+      let result = "";
+      result += "Original String: " + text + "<br>";
+      result += "Length: " + text.length + "<br>";
+      result += "Uppercase: " + text.toUpperCase() + "<br>";
+      result += "Lowercase: " + text.toLowerCase() + "<br>";
+      result += "Trimmed: " + text.trim() + "<br>";
+      result += "Character at 6: " + text.charAt(6) + "<br>";
+      result += "Index of 'Script': " + text.indexOf("Script") + "<br>";
+      result += "Replace 'Java' with 'ECMA': " + text.replace("Java", "ECMA") + "<br>";
+      result += "Slice(1,5): " + text.slice(1,5) + "<br>";
+      result += "Concat: " + text.concat(" is awesome!") + "<br>";
+
+      document.getElementById("stringOutput").innerHTML = result;
+    }
+
+    // Math function demo
+    function showMathFunctions() {
+      let result = "";
+      result += "PI: " + Math.PI + "<br>";
+      result += "Square Root of 25: " + Math.sqrt(25) + "<br>";
+      result += "2³ (2^3): " + Math.pow(2, 3) + "<br>";
+      result += "Absolute of -10: " + Math.abs(-10) + "<br>";
+      result += "Ceil(4.3): " + Math.ceil(4.3) + "<br>";
+      result += "Floor(4.9): " + Math.floor(4.9) + "<br>";
+      result += "Round(4.5): " + Math.round(4.5) + "<br>";
+      result += "Random (0-1): " + Math.random() + "<br>";
+      result += "Max(10, 20, 30): " + Math.max(10, 20, 30) + "<br>";
+      result += "Min(10, 20, 30): " + Math.min(10, 20, 30) + "<br>";
+
+      document.getElementById("mathOutput").innerHTML = result;
+    }
+  </script>
+
+</body>
+</html>
