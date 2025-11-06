@@ -21,7 +21,7 @@
     <td>FIRST NAME:</td>
     <td>
         <input type="text" id="fname">
-        <div class="error" id="fnameError"></div>
+        <div class="error" id="fnameError">  </div>
     </td>
 </tr>
 
@@ -329,7 +329,7 @@ function validateForm() {
         qualificationError.textContent = "All qualification fields must be filled.";
         isValid = false;
     } else {
-        qualificationError.textContent = "";
+        qualificationError.textContent = " ";
     }
 
     return isValid;
