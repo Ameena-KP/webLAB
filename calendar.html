@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calendar Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .calendar {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        table {
+            width: 220px;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th {
+            background: #0078d7;
+            color: white;
+            padding: 5px;
+        }
+        td {
+            text-align: center;
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+        .input-box {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 8px 15px;
+            background: #0078d7;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #005bb5;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Calendar Generator Using JavaScript</h2>
+
+<div class="input-box">
+    <label>Enter Year: </label>
+    <input type="number" id="yearInput" placeholder="e.g., 2025">
+    <button onclick="generateCalendar()">Show Calendar</button>
+</div>
+
+<div id="calendarContainer"></div>
+
+<script>
+function generateCalendar() {
+    let year = document.getElementById("yearInput").value;
+    if (year === "") {
+        alert("Please enter a year");
+        return;
+    }
+
+    let container = document.getElementById("calendarContainer");
+    container.innerHTML = ""; // Clear previous calendar
+
+    const months = [
+        "January","February","March","April","May","June",
+        "July","August","September","October","November","December"
+    ];
+
+    for (let month = 0; month < 12; month++) {
+        let calendarDiv = document.createElement("div");
+        calendarDiv.className = "calendar";
+
+        let monthName = document.createElement("h3");
+        monthName.innerText = months[month] + " " + year;
+        calendarDiv.appendChild(monthName);
+
+        let table = document.createElement("table");
+
+        // Weekdays header
+        let thead = document.createElement("thead");
+        thead.innerHTML = `
+            <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+        `;
+        table.appendChild(thead);
+
+        let date = new Date(year, month, 1);
+        let firstDay = date.getDay(); // Starting weekday
+
+        let daysInMonth = new Date(year, month + 1, 0).getDate();
+
+        let tbody = document.createElement("tbody");
+        let row = document.createElement("tr");
+
+        // Empty cells before first day
+        for (let i = 0; i < firstDay; i++) {
+            row.appendChild(document.createElement("td"));
+        }
+
+        // Fill days of the month
+        for (let day = 1; day <= daysInMonth; day++) {
+            let cell = document.createElement("td");
+            cell.innerText = day;
+            row.appendChild(cell);
+
+            if ((firstDay + day) % 7 === 0) {
+                tbody.appendChild(row);
+                row = document.createElement("tr");
+            }
+        }
+
+        // Append remaining row
+        tbody.appendChild(row);
+        table.appendChild(tbody);
+        calendarDiv.appendChild(table);
+        container.appendChild(calendarDiv);
+    }
+}
+</script>
+
+</body>
+</html>
+
